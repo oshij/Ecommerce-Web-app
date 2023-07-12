@@ -1,0 +1,11 @@
+{
+  "name": "ecommerce-web-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start" : "node server.js"
+  },
+  "author": "Oshij Trivedi",
+  "license": "ISC"
+}

@@ -1,4 +1,5 @@
 const express = require('express')
+require('dotenv').config()
 const colors = require('colors')
 // rest object
 const app = express()
@@ -9,10 +10,8 @@ const app = express()
 app.get('/',(req,res) => {
     res.send('<h1>Welcome to ecommerce app</h1>')
 })
-//PORt
-const PORT = 8000
-
+const PORT = process.env.PORT;
 //run listen
 app.listen(PORT, () =>{
-    console.log(`Server Running on : ${PORT}`.bgCyan.white)
+    console.log(`Server Running on ${process.env.DEV_MODE} mode on : ${PORT}`.bgCyan.white)
 })

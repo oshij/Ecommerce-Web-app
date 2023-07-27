@@ -1,8 +1,19 @@
 const express = require('express')
 require('dotenv').config()
 const colors = require('colors')
+const morgan = require('morgan')
+const connectDB = require('./config/db')
+
+
 // rest object
 const app = express()
+
+//database config
+connectDB()
+
+//middelwares 
+app.use(express.json())
+app.use(morgan('dev'))
 
 // rest api
 // '/' means it will be at home
